@@ -4,11 +4,11 @@
 	height: 100%;
 	margin: auto;
 	background: rgb(0,135,46);
-background: linear-gradient(to bottom, #00B355, #00FF7A);
+	background: linear-gradient(to bottom, #00B355, #00FF7A);
 	box-shadow: 2px 2px 15px black;
 	border-radius: 5px;
 	padding: 35px;
-	font-family: 'Otomanopee One', arial, sans serif;
+	font-family: 'Otomanopee One', arial, sans-serif;
 }
 
 h1{
@@ -17,13 +17,18 @@ h1{
 	text-shadow: 0px 0px 3px #00000085;
 }
 
+h3{
+	text-align: center;
+}
+
 #btInicia{
-	font-family: 'Otomanopee One', arial, sans serif;
+	font-family: 'Otomanopee One', arial, sans-serif;
 	padding: 10px;
 	background-color: #FF3019;
 	cursor: pointer;
 	border: none;
 	display: block;
+	box-shadow: 0 0 15px black;
 	height: 100%;
 	font-size: 1.5em;
 	color: #240401;
@@ -38,6 +43,7 @@ h1{
 }
 
 #impr{
+	font-family: 'Courier New', Courier, monospace;
 	height: 45px;
 	width: 70%;
 	background-color: rgba(100,125,96,0.7) ;	
@@ -50,7 +56,6 @@ h1{
 }
 
 #opcLetras{
-	
 	max-width: 600px;
 	margin: auto;
 }
@@ -58,13 +63,14 @@ h1{
 .word{
 	background: #B31200;
 	display: inline-block;
-	margin: 4px auto;
-	width: 40px;
+	margin: 4px auto 0 auto;
+	width: 50px;
+	height: 50px;
 	text-align: center;
 	border: none;
 	border-radius: 4px;
-	box-shadow: 0px 0px 5px black;
-	font-size: 1.8em;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.747);
+	font-size: 2.2em;
 	cursor: pointer;
 	transition-duration: 0.4s;
 	padding: 2px;
@@ -73,4 +79,16 @@ h1{
 .word:hover{
 	background: #8cb300;
 	font-weight: bold;
+}
+
+#chances{
+	box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.644);
+	background-color: #B31200;
+	color: #ffffff;
+	text-align: center;
+	font-size: 2.4em;
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin: 10px auto;
 }
