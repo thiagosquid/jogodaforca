@@ -78,7 +78,7 @@ h3{
 
 .word:hover{
 	background: #8cb300;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 #chances{

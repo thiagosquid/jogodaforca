@@ -9,25 +9,32 @@ let inicia = document.getElementById('btInicia');
 let letra='';
 let letrasEscolhidas = [];
 let chancesBox = document.getElementById('chances');
-
 inicia.addEventListener('click', recebePalavra);
-
 let botoes = document.body.querySelectorAll(".word");
+let btn = document.getElementsByTagName('button');
+
 
 // Pra gerar eventListener de todas as letras
 for(let x=0; x<botoes.length; x++){
-   botoes[x].addEventListener("click", function(){
+    botoes[x].addEventListener("click", function(){
     letra = this.value;
+    btn[x+1].setAttribute('style','background-color: #1a030188;');
         if(letrasEscolhidas.indexOf(letra) == -1){
             if(chances > 0){
             verificaLetra(letra);
             }
-        }else{alert('Letra já escolhida, digite outra')
+        // }else{alert('Letra já escolhida, digite outra')
         }
    });
 }
+
+
     //Inicialização do jogo
 function recebePalavra(){
+    //For para repor as cores das letras clicadas anteriormente
+    for(let i of btn){
+        i.removeAttribute('style');
+    }
     letrasEscolhidas = [];
     let impr = '';
     chances = 5;
@@ -42,6 +49,7 @@ function recebePalavra(){
     }
     imprimeTexto(impr)
 }
+
     //impressão da palavra no mostrador
 function imprimeTexto(pal){
     var upper = pal.toUpperCase();
@@ -61,17 +69,16 @@ function verificaLetra(l){
             }
         }
     alteraImpressao();
-        if(palavraOculta.indexOf(l) == -1){
-        chances -= 1;
-        chancesBox.innerHTML = chances;
-            if(chances == 0){
-                alert('Você perdeu');
-                if(confirm('Deseja jogar novamente?')){
-                    recebePalavra();
-                }
+    if(palavraOculta.indexOf(l) == -1){
+    chances -= 1;
+    chancesBox.innerHTML = chances;
+        if(chances == 0){
+            alert('Você perdeu');
+            if(confirm('Deseja jogar novamente?\n')){
+                recebePalavra();
             }
+        }
     }
-    
 }
 
 function alteraImpressao(){
