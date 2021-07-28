@@ -23,7 +23,6 @@ for(let x=0; x<botoes.length; x++){
             if(chances > 0){
             verificaLetra(letra);
             }
-        // }else{alert('Letra já escolhida, digite outra')
         }
    });
 }
@@ -42,7 +41,7 @@ function recebePalavra(){
     palavraSel = Math.floor(Math.random()*lista.length);
     tamPal = lista[palavraSel].length;
     palavraOculta = lista[palavraSel];
-    console.log(`A palavra selecionada é ${palavraOculta}`);
+    
     for(var i = 0; i < tamPal; i++){
         espacos[i] = '_';
         impr += espacos[i];
@@ -63,11 +62,15 @@ function verificaLetra(l){
     let cont = 0;
     var imp = '';    
     letrasEscolhidas.push(l);
+    console.log(palavraOculta.includes(l)? "Tem" : "Não tem");
+    if(palavraOculta.includes(l)){
         for(cont = 0; cont < tamPal; cont++){
             if(l == palavraOculta[cont]){
                 espacos[cont] = l;
             }
         }
+    }
+        
     alteraImpressao();
     if(palavraOculta.indexOf(l) == -1){
     chances -= 1;

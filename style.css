@@ -43,7 +43,7 @@ h3{
 }
 
 #impr{
-	font-family: 'Courier New', Courier, monospace;
+	/* font-family: 'Courier New', Courier, monospace; */
 	height: 45px;
 	width: 70%;
 	background-color: rgba(100,125,96,0.7) ;	
@@ -53,11 +53,13 @@ h3{
 	font-weight: bold;
 	font-size: 1.8em;
 	border: 2px dashed #B31200;
+	vertical-align: middle;
 }
 
 #opcLetras{
 	max-width: 600px;
 	margin: auto;
+	text-align: center;
 }
 
 .word{
